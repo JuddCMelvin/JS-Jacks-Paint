@@ -1,20 +1,20 @@
 function configureListeners() {
-    let images = document.getElementsByTagName("img");
+    let images = document.querySelectorAll('img');
 
 
-    for (i = 0; i < images.length; i++) {        
-        images[i].addEventListener("mouseover", function(event) {
+    for (i = 0; i < images.length; i++) { 
+
+        images[i].addEventListener('mouseover', function(event) {
             // Display the name when the mouse moves over the element
-            alert("Name: " + name);
-            });
-            console.log("Mouse over the element!");     
+            console.log("Mouse over the element!"); ;
+            }, false);    
     }
 }
 
-// function addOpacity(event) {
-//     // add appropriate CSS class
-//     getProductInfo(event.target.id);     
-// }
+function addOpacity(event) {
+    // add appropriate CSS class
+    getProductInfo(event.target.id);     
+}
 
 // function removeOpacity(event) {
 //      //remove appropriate CSS class
