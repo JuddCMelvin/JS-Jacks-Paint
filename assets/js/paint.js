@@ -68,13 +68,13 @@ function getProductInfo(paintColor) {
         default:              
     }
 
-//     function updatePrice(colorName, price)
-//     {       
-//         let colorPrice = // select element with corresponding id
-//         // display price
+function updatePrice(colorName, price)
+    {       
+        let colorPrice = document.getElementById('color-price');
+        colorPrice.textContent = price;
         
-//         let color = // select element with corresponding id
-//         //display color name
-//     }
+        let color = document.getElementById('color-name');
+        color.textContent = colorName;
+    }
     
 }
