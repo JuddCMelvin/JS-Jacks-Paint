@@ -25,8 +25,8 @@ function removeOpacity(event) {
         this.classList.remove('dim');
     } 
     console.log('off')
-    let element = document.getElementById('color-price');
-        element.textContent = '';
+    let colorPrice = document.getElementById('color-price');
+        colorPrice.textContent = '';
         
     let color = document.getElementById('color-name');
         color.textContent = ''; 
