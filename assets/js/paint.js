@@ -4,11 +4,7 @@ function configureListeners() {
 
     for (let i = 0; i < images.length; i++) { 
         document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false) 
-        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)  
-    //     images[i].addEventListener('mouseover', function(event) {
-    //         // Display the name when the mouse moves over the element
-    //         console.log("Mouse over the element!"); ;
-    //         }, false);    
+        document.getElementById(images[i].id).addEventListener('mouseout', removeOpacity, false)     
     }
 }
 
