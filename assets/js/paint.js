@@ -1,18 +1,21 @@
 function configureListeners() {
-    let images = document.querySelectorAll('img');
+    let images = document.getElementsByTagName('img');
 
 
-    for (i = 0; i < images.length; i++) { 
-
-        images[i].addEventListener('mouseover', function(event) {
-            // Display the name when the mouse moves over the element
-            console.log("Mouse over the element!"); ;
-            }, false);    
+    for (let i = 0; i < images.length; i++) { 
+        document.getElementById(images[i].id).addEventListener('mouseover', addOpacity, false) 
+    //     images[i].addEventListener('mouseover', function(event) {
+    //         // Display the name when the mouse moves over the element
+    //         console.log("Mouse over the element!"); ;
+    //         }, false);    
     }
 }
 
 function addOpacity(event) {
-    // add appropriate CSS class
+    if (!this.classList.contains('dim')){
+        this.classList.add('dim')
+    }    
+    console.log('opacity')
     getProductInfo(event.target.id);     
 }
 
@@ -28,40 +31,42 @@ function addOpacity(event) {
 //     event.preventDefault();    
 // }
 
-// function getProductInfo(paintColor) {
-//     let price;
-//     let colorName;  
+function getProductInfo(paintColor) {
+    let price;
+    let colorName;  
     
-//     switch (paintColor) {
-//         case 'pn1':           
-//             // set variables for price and color name and invoke a function to update the price     
-//             break;           
-//         case 'pn2':
-//             // set variables for price and color name and invoke a function to update the price    
-//             break;            
-//         case 'pn3':
-//             // set variables for price and color name and invoke a function to update the price  
-//             break;   
-//         case 'pn4':
-//             // set variables for price and color name and invoke a function to update the price  
-//             break;   
-//         case 'pn5':
-//             // set variables for price and color name and invoke a function to update the price       
-//             break;   
-//         case 'pn6':
-//             // set variables for price and color name and invoke a function to update the price        
-//             break;   
-//         case 'pn7':
-//             // set variables for price and color name and invoke a function to update the price 
-//             break;   
-//         case 'pn8':
-//             // set variables for price and color name and invoke a function to update the price   
-//             break;   
-//         case 'pn9':
-//             // set variables for price and color name and invoke a function to update the price 
-//             break;   
-//           default:              
-//     }
+    switch (paintColor) {
+        case 'pn1':   
+            price = '$19.99'
+            colorName = 'Lime Green'        
+            updatePrice(colorName, price)       
+            break;           
+        case 'pn2':
+            // set variables for price and color name and invoke a function to update the price    
+            break;            
+        case 'pn3':
+            // set variables for price and color name and invoke a function to update the price  
+            break;   
+        case 'pn4':
+            // set variables for price and color name and invoke a function to update the price  
+            break;   
+        case 'pn5':
+            // set variables for price and color name and invoke a function to update the price       
+            break;   
+        case 'pn6':
+            // set variables for price and color name and invoke a function to update the price        
+            break;   
+        case 'pn7':
+            // set variables for price and color name and invoke a function to update the price 
+            break;   
+        case 'pn8':
+            // set variables for price and color name and invoke a function to update the price   
+            break;   
+        case 'pn9':
+            // set variables for price and color name and invoke a function to update the price 
+            break;   
+        default:              
+    }
 
 //     function updatePrice(colorName, price)
 //     {       
@@ -72,4 +77,4 @@ function addOpacity(event) {
 //         //display color name
 //     }
     
-// }
+}
